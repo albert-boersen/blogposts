@@ -1,5 +1,5 @@
 ![Jamstack](https://d33wubrfki0l68.cloudfront.net/21c2e938a6a0468a8583b905f1156521c456f79c/2612d/img/logo/svg/jamstack_logo_darkbg.svg)
-# Jamstack
+# Jamstack proof of concept
 
 ![Albert](https://media-exp2.licdn.com/dms/image/C4D03AQEgWB327WYNBQ/profile-displayphoto-shrink_200_200/0/1649085287683?e=1662595200&v=beta&t=CYs_9ZmOahwzKHrCYoOUYS3nppyfBxR2K9avgzgN22o)
 
@@ -8,7 +8,7 @@ Door Albert
 ## Inleiding
 
 Wie ken ze niet, de grote CMS pakketten die "alles" kunnen. Die op servers geinstalleerd moeten worden met allerlei nadelen van dien. Of de CMS pakketten die het niet kunnen maar je "eenvoudig" een plugin voor kan installeren (soms onveilig, vaak ongetest).
-En wie kent het ook niet, het beheer van die pakketten en alles wat er nog meer bij komt kijken, zoals risicovolle releases, en laten we helemaal al niet beginnen over slechte performance van je site.
+En wie kent het ook niet, het beheer van die pakketten en alles wat er nog meer bij komt kijken, zoals risicovolle releases, en laten we helemaal al niet beginnen over slechte performance van je site of de kosten van sommige van die pakketten.
 
 Al een behoorlijke tijd zijn er ook Headless oplossingen zoals Kontent, Heartcore of Contentful. Maar wat als je al de extra mogelijkheden van zo'n groot CMS nu eens ook als losstaande oplossingen gaat zien?
 
@@ -25,12 +25,12 @@ In deze post ga ik niet te technisch in op de zaken, maar hier en daar zal ik to
 
 - [Inleiding](#inleiding)
 - [Jamstack](#jamstack)
-- [Headless CMS](#headless)
+- [Headless CMS](#headless-cms)
 - [Uniform](#uniform)
 - [Formulieren](#formulieren)
 - [NextJS](#nextjs)
 - [Vercel](#vercel)
-- [Proof of Concept](#proofofconcept)
+- [Proof of Concept](#proof-of-concept)
 - [Conclusie](#conclusie)
 - [Demo](#demo)
 - [Links](#links)
@@ -43,7 +43,7 @@ De JAM in jamstack staat voor:
 * (J)avascript
 * (A)PI's
 * (M)arkup
-Dus eigenlijk zeg je, je maakt met Javascript en Markup gebruik van API's die bijvoorbeeld je content uit en headless CMS haalt en je formulieren in een ander SaaS pakket wegschrijft. Dit alles wordt dan op de "Edge" van het web geplaatst zodat het snel bereikbaar is voor het grote publiek.
+Dus eigenlijk zeg je, je maakt met Javascript en Markup gebruik van API's die bijvoorbeeld je content uit een headless CMS haalt en je formulieren in een ander SaaS pakket wegschrijft. Dit alles wordt dan op de "Edge" van het web geplaatst zodat het snel bereikbaar is voor het grote publiek.
 
 ## Headless CMS
 Als headless CMS heb ik zelf ervaring met Kontent, Heartcore en Contentful.
@@ -71,6 +71,9 @@ Ook zijn er scores bij te houden gebaseerd op acties die op je site plaats vinde
 
 ![Uniform-personalisation](https://gcdnb.pbrd.co/images/2tE6bPrQOrmH.png?o=1)
 
+### Koppeling met headless
+Uniform kan je configureren zodat het direct werkt met een headless CMS zoals Contentful. Dit werkt erg handig en zorgt ervoor dat je als content editor makkelijk vanuit je opbouw van je pagina naar je onderdelen met content in je headless CMS kan wisselen.
+
 ## Formulieren
 Een boeiend punt wat je vaak terug ziet komen als motivatie om vast tee houden aan een traditioneel CMS zijn een ingebouwde formulieren module. En inderdaad, dat is ook zeker handig om in je CMS te hebben zitten, maar hoe zou je dat kunnen oplossen op een Jamstack manier?
 
@@ -81,67 +84,48 @@ Mijn oplossing was daarvoor **[Basin](https://usebasin.com/ "Use Basin")**.
 Een duidelijke SaaS oplossing die alles wat wordt gestuurd naar een **API** endpoint opslaat en zelfs notificaties en autoresponders kan sturen.
 
 ## NextJS
-NextJS is een framework gebaseerd op React. Het is ontwikkeld en wordt onderhouden door Vercel. 
+NextJS is een framework gebaseerd op React. Het combineert de kracht van een statische html site en het server side renderen van een "klassieke" server / client website.
+Meer hierover bij [Vercel](#vercel).
+
+Maar wat ik nog over NextJS wil melden is dat het niet alleen de voordelen biedt van de modulaire opbouw zoals ook wel bekend bij React sites, maar het biedt ook gigantisch veel optimalisatie voor bijvoorbeeld afbeeldingen en responsive.
+
+NextJS bouwt voordat het een echte site maakt alle code om tot een statische website (HTML). Op deze manier zijn alle **API** aanroepen al gedaan en is de website super snel.
+
+Ook is het voordeel van de modulaire opbouw dat iedere developer zich snel wijs kan maken binnen een project.
 
 ## Vercel
+Om uiteindelijk de PoC publiekelijk zichtbaar te maken in plaats van alleen op een laptop moet het nog ergens gehost worden.
+Maar we werken met Jamstack, dus we gebruiken geen traditionele web servers zoals Apache of IIS.
+
+Mijn git repository is gekoppeld met **[Vercel](https://vercel.com/ "Vercel")**. Zodra er code door wordt gezet naar de productie branch pakt Vercel dit op en gaat het ombouwen tot een statische website. Dit is een proces van een halve minuut tot een minuut, natuurlijk afhankelijk van hoeveel er omgebouwd moet worden, en komt bij succes *(schrik niet)* automatisch op productie te staan.
+
+Als je werkt met feature branches en zo'n branch ook pushed naar de git repository pakt Vercel dit ook op en zet het ook om in een statische site. Deze komt dan niet op productie terecht maar krijgt een eigen URL. Super handig, want deze URL kan je delen met je tester of Product owner. Op deze manier kan je je features snel checken met de rest van je team en kan het ook sneller naar productie.
+
+Releasen naar productie ga je ook veel sneller doen, Vercel houdt namelijk de eerdere versies bij en je kan daar altijd makkelijk naar terug schakelen, het is natuurlijk statische HTML en dat zijn alleen maar bestanden. Dus releasen gaat ook zonder downtime en performance verlies.
 
 ## Proof of Concept
+Tot nu toe was het veel theorie over wat ik waarvoor heb gebruikt en wat het doet, maar hoe ziet het er nu allemaal uit?
+Bekijk de volgende video waarin ik laat zien hoe het allemaal met elkaar in verbinding staat:
+[video-maken-en-plaatsen]
 
 ## Conclusie
-Hier komt dan mijn conclusie
+Mijn conclusie is dat de flexibiliteit van Jamstack zoveel beter is dan een log CMS die claimt alles te kunnen. Wat je vaak ziet dat een groot CMS het wel kan wat het claimt, maar dat het net niet lekker werkt. Een SaaS die zich specialiseert in dat ene onderdeel is altijd beter dan een groot CMS die het erbij heeft gemaakt.
+
+De snelheid van NextJS en Vercel blijft mij verbazen, het statische site voordeel is zo gigantisch groot, het kostte ook bijna geen moeite om een 100% score te halen binnen Lighthouse.
+
+Het feit dat features kunnen worden bekeken door een PO of tester na het committen van je changes scheelt ook veel in het ontwikkelproces.
+
+Uniform biedt met canvas de mogelijkheid om de opbouw van je pagina's te bepalen met blokken die je kan verslepen. Daarnaast is de mogelijkheid om te personaliseren ook erg fijn, stel je hebt gezocht op een bepaalde behandeling in een ziekenhuis en je krijgt automatisch een link naar een folder te zien op een volgende pagina naast de contact gegevens (is maar 1 van de vele voorbeelden).
+
+Mijn eindvraag is dan ook, waarom ben je nog niet over naar Jamstack?
 
 ## Demo
-Hier komen links naar mijn demo
+Hier kan je mijn PoC vinden: **[Serverless-Digital](https://demo-heartcore-uniform-nextjs.vercel.app/ "Serverless Digital")**
 
 ## Links
-Voor mensen die geen zin hebben om te googlen
-
-
-## Emphasis
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-## Code
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
-
-
-## Links
-
-[link text](http://dev.nodeca.com)
-
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
-
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+- [Vercel](https://vercel.com/ "Vercel")
+- [Basin](https://usebasin.com/ "Use Basin")
+- [Contentful](https://www.contentful.com/ "Contentful")
+- [Uniform](https://uniform.app/ "Uniform")
+- [NextJS](https://nextjs.org/ "NextJS")
+- [Over mij](https://potential-sniffle.vercel.app/ "Over mij")
