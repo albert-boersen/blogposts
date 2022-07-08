@@ -1,0 +1,13 @@
+Hallo allemaal,
+
+Vandaag wil ik jullie laten zien wat we hebben gerealiseerd in de Jamstack Proof of concept.
+
+Onze proof of concept is gemaakt in het framework NextJS.
+We gebruiken daarnaast een headless CMS genaamd Contentful.
+Maar dat kan natuurlijk ook Umbraco heartcore of Kontent by Kentico zijn.
+
+Ook gebuiken we Uniform, een composable DXP waarin ook personalisatie mogelijk is.
+
+Daarnaast gebruiken we Vercel, om onze dynamische NextJS site om te zetten naar een statische site en het direct te hosten.
+
+We gebruiken ook Basin, een SaaS oplossing om formulier data in op te slaan, we hebben namelijk geen database daarvoor.

@@ -1,0 +1,10 @@
+Dan gaan we nu eens kijken op onze serverless digital site of onze nieuwe signal ook wordt weergegeven.
+
+We zien hem er bij staan in de inactive dimensions.
+
+Als we nu klikken op de campaign X kaart zien we dat de utm_campaign=x wordt toegevoegd aan de url.
+We zien ook direct de aangepaste call to action.
+En als we nogmaals kijken naar de scores van uniform zien we dat we 50 punten hebben bij onze campaign signal.
+
+Dus dat is kort hoe het personaliseren in uniform werkt.
+Het is ook nog mogelijk om de volgorde van de blokken aan te passen in uniform en dit zal je na het publiceren en builden ook terug zien op de site.

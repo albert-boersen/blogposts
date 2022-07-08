@@ -1,0 +1,17 @@
+Laten we naar onze Serverless digital site gaan.
+
+Even opnieuw laden en we zien onze nieuwe pagina in het menu staan.
+
+Voordat we deze pagina gaan bezoeken kunnen we alvast bekijken of onze signal wordt weergegeven in onze uniform extension.
+
+We klikken op inactive dimensions en we zien onze marketeers signal er tussen staan, we hebben nog geen score want daarvoor moeten we eerst naar de marketer pagina zelf gaan.
+
+We klikken in het menu op 'marketeers' en komen op de marketeers pagina met onze content die we hebben aangemaakt.
+
+Als we nu in de uniform extension kijken zien we onze score bij de marketer signal.
+
+We gaan nu naar de homepage en daar zien we dat onze gepersonaliseerde hero wordt getoond.
+
+Tof toch?
+
+Laten we verder gaan met onze call to action die we gaan laten personaliseren op basis van een campagne via de querystring.

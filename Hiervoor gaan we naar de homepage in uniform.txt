@@ -1,0 +1,11 @@
+Hiervoor gaan we naar de homepage in uniform
+
+en slepen we het card grid boven de call to action.
+
+Klikken we op save en daarna op publish.
+
+dan gaan we terug naar compositions en publiceren we alles.
+
+Even kijken in vercel zodat we kunnen zien dat het wordt opgepakt.
+
+En als dat klaar is kunnen we de serverless digital site weer refreshen en zien we dat de volgorde is aangepast.

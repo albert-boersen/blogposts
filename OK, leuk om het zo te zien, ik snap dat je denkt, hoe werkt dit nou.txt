@@ -1,0 +1,73 @@
+OK, leuk om het zo te zien, ik snap dat je denkt, hoe werkt dit nou?
+En kan ik dit zelf beheren?
+Het korte antwoord is, ja je kan het zelf beheren, en ik ga je dat nu laten zien door een marketeer pagina toe te voegen en daar een nieuwe gepersonaliseerde hero voor te maken.
+
+Daarnaast gaan we een nieuwe gepersonaliseerde call to action toevoegen die gaat werken met een campagne (via de querystring) maar nu eerst de marketeers pagina.
+
+We gaan naar uniform. In uniform klikken we op canvas.
+Hier hebben we verschillende compositions en dit is eigenlijk het DXP gedeelte van uniform.
+We gaan een nieuwe 'marketeer' pagina aanmaken dit doen we door een nieuwe composition toe te voegen.
+In het volgende scherm kiezen we voor default page, onze pagina is namelijk een standaard content pagina.
+
+We noemen de pagina 'Marketeers' en klikken op create.
+Eerst geven we de pagina een URL waaronder hij bereikbaar is bij SLUG.
+/marketeers
+
+Nu zitten we in de nieuwe Marketeers pagina en kunnen we hem in elkaar gaan zetten.
+Dit doen we door blokken toe te voegen die we gaan koppelen met onze daadwerkelijke content uit contentful (het headless cms).
+
+Laten we eerst een nieuwe hero toevoegen.
+Hier zie je dat we direct de content van contentful kunnen benaderen, maar we hebben nog geen Marketeer hero, dus laten we die aanmaken.
+
+Klik op add new, Hero en dan wordt contentful geladen.
+Hier kunnen we direct een nieuwe hero aanmaken.
+
+Marketeers
+Typische marketeer subtitle
+en we kiezen een afbeelding
+
+even publiceren
+
+en als we nu teruggaan naar uniform zien we dat deze hero is gekoppeld.
+
+Zo gaan we dit ook doen voor main
+en daarin plaatsen we een rich text blok
+
+Rich text komt ook uit contentful, dus ik zal dat even snel aanmaken.
+
+add new, plain content
+en ik vul wat data in en zal het zo publiceren.
+
+Nu hebben we snel een nieuwe pagina aangemaakt, maar deze is nog niet zichtbaar in het menu.
+Laten we daar eens verandering in aanbrengen.
+Oh even tussendoor, ik heb ervoor gekozen om het menu ook in uniform te zetten, dat is natuurlijk mijn keuze, maar is afhankelijk van de keuze in je applicatie of je dat wel of niet doet of op een andere manier oplost.
+
+Terug naar compositions, open de main navigation.
+op het plusje, navigation item en daar voeren we de data in, marketeers en /marketeers
+De navigation URL moet gelijk zijn met de SLUG van de composition
+
+Dan klikken we op save en publiceren we alles.
+
+Nu hebben we de nieuwe pagina aangemaakt, maar hoe gaan we dan scores bijhouden als men deze pagina bezoekt?
+
+Hiervoor gaan we naar personalization
+We gaan een nieuw signal toevoegen genaamd marketeers
+Als criteria willen we een page visit registreren dus klikken we op 'see more criteria options'
+We klikken op current page en we voeren de url in van de marketers pagina
+We geven het signal een strength van 1 en de max laten we op 100 staan.
+Nu klikken we op save and close en hebben we het signal aangemaakt.
+
+Ok, signal is aangemaakt, pagina en navigatie is aangemaakt, next.
+
+Nu gaan we op basis van deze score een blokje in onze homepage personaliseren, laten we zeggen de hero.
+
+We klikken op canvas, homepage, klikken op het plusje boven de default hero en voegen een nieuwe hero toe.
+We selecteren even snel de hero die ook op de marketer pagina staat.
+We zien nu dat uniform denkt dat dit de default variant is, maar dat willen we niet, dus we klikken op add criteria.
+
+We selecteren onze marketers signal, en has the strongest score.
+Om nu te zorgen dat hij niet getoond wordt als de score 0 is voegen we nog een criteria toe die dat afdwingt.
+
+We klikken op save.
+
+Nu gaan we even alles publiceren en kijken wat het resultaat is.

@@ -1,0 +1,43 @@
+Ik heb alvast in contentful mijn call to action content voorbereid.
+
+Dus om een gepersonaliseerde call to action aan de pagina toe te voegen gaan we eerst naar uniform om een nieuwe signal aan te maken.
+Daarna gaan we een nieuw call to action blok in de homepage aanmaken.
+
+We openen uniform en gaan naar personalization
+
+We maken een nieuw signal aan en noemen die campaignX
+
+Daar voegen we een nieuwe 'query string' criteria aan toe.
+
+Als query string name geven we hem utm_campaign
+en de waarde geven we x
+We laten even de strenght op 50 staan.
+En slaan hem op.
+
+Dan gaan we naar canvas
+
+Homepage
+
+Op het plusje tussen de twee bestaande 'call to action' blokken
+
+Call to action
+
+Koppelen met mijn bestaande Call to action content
+
+en op accept
+
+Nu moeten we deze Call to action nog personaliseren.
+
+Dus add criteria
+Selecteer onze nieuwe aangemaakte signal
+has the strongest score
+
+en de criteria om te zorgen dat hij niet wordt getoond bij een 0 waarde.
+
+Save.
+
+Even tussendoor, om de wijzigingen door te krijgen moeten we in uniform publishen, dit trapt een actie af in vercel waar een nieuwe statische productie versie gemaakt wordt.
+
+Laten we in vercel kijken of deze build wordt uitgevoerd.
+
+In dit gedeelte kan je zien of er een nieuwe versie gemaakt wordt.

@@ -1,0 +1,14 @@
+Tot slot kunnen we op de contact pagina het formulier invullen, laten we dat doen.
+
+Contact
+
+En we zien onderaan het scherm het formulier, dit is ook een blok in uniform en kan dus ook op een andere locatie geplaatst worden.
+
+De html en validatie en dergelijke heb ik in mijn nextjs app gemaakt.
+
+laten even wat informatie invullen en klikken op send form.
+
+Nu kunnen we naar Basin gaan en daar zien we een nieuw bericht.
+
+In Basin kan je een autoreply en notification configureren.
+Daarnaast wordt er een lijst bijgehouden van eventuele spamberichten, dat is wel zo handig.

@@ -1,0 +1,16 @@
+Nog even een korte samenvatting:
+
+We gebruiken Uniform als basis voor onze layout.
+Koppelen daar onze content uit een headless cms met de blokjes die we plaatsen.
+Deze blokjes kunnen we personaliseren. En verslepen om de layout aan te passen.
+
+Uniform, contentful en onze gitrepository worden gebruikt als bron voor een nieuwe build van onze statische html.
+Dus als je iets publiceert in uniform of het cms wordt er automatisch een nieuwe productie versie gemaakt.
+Ook als een code aanpassing wordt gepushed naar de productie branch wordt er automatisch een nieuwe productie versie gemaakt.
+
+Daarnaast wordt onze formulier data opgeslagen in basin, want we hebben geen database.
+
+
+Ik hoop dat deze demo inzicht geeft in wat er mogelijk is met uniform en jamstack.
+
+Bedankt voor het kijken!

@@ -1,0 +1,17 @@
+Voordat we de diepte in gaan zal ik even kort het eindresultaat laten zien.
+Daarna kunnen we verder een kijkje nemen hoe het nu echt werkt!
+
+Hier zien we onze NextJS site, genaamd Serverless Digital.
+Rechtsbovenin hebben we een menu, en we zien verschillende onderdelen, een hero, een call to action en een card overview.
+
+Als we nu gaan navigeren naar de developers pagina, dan gaat er wat spannends gebeuren.
+Uniform gaat een score bijhouden die je hier alvast kunt zien in mijn uniform chrome extension.
+
+Als we nu terug navigeren naar de homepage zal je zien dat de hero en call to action zijn aangepast naar een 'developer variant'.
+
+Ik kan nu eenvoudig in mijn extension de score weer wissen en ik zal direct weer de standaard varianten zien op de homepage.
+
+Ik heb nu gekozen voor een zo duidelijk mogelijk verschil, maar in de praktijk zullen deze verschillen waarschijnlijk wat kleiner zijn.
+
+Als echte wereld scenario zie ik bijvoorbeeld een case voor me van een persoon die zoekt op een behandeling binnen de site van een ziekenhuis.
+Met uniform en gepersonaliseerde content zou je deze persoon in de toekomst sneller kunnen helpen door ze vrijwel direct een folder aan te bieden gebaseerd op hun score uit uniform.
